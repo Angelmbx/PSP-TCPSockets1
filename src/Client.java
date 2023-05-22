@@ -28,7 +28,10 @@ public class Client {
         inputStream = new DataInputStream(clientC.getInputStream());
         System.out.println("El cliente C es el numero " + inputStream.readInt());
 
-
-
+        //close streams and sockets
+        inputStream.close();
+        clientA.close();
+        clientB.close();
+        clientC.close();
     }
 }

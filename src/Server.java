@@ -35,7 +35,9 @@ public class Server {
         outputStream = new DataOutputStream(client3.getOutputStream());
         outputStream.writeInt(3);
 
-
+        //close streams and sockets
+        outputStream.close();
+        server.close();
     }
 
 
